@@ -15,7 +15,10 @@ This project was built in Java using Gradle v8.14
 
 To run, enter the following in the terminal:
 
->java
+> java -jar csc480-homework1-1.0.jar
+
+The command "IDDFS" will run the solution to problem 2. The command "ASTAR" will run the solution to problem 3. <br>
+The complete code on GitHub [here](https://github.com/StateControlled/CSC480-AI/tree/main/homework1)
 
 ---
 
@@ -93,7 +96,7 @@ See edu.depaul.wberthou.search.IterativeDeepeningDFS.java for implementation.
 #### Problem 3. 20 Points: A* Search
 
 See edu.depaul.wberthou.search.AStar.java for implementation. 
-See problem3-full-disclosure.md for information on AI-generated answer to this problem.
+See [problem3-full-disclosure](problem3-full-disclosure.md) for information on AI-generated answer to this problem.
 
 
 #### Problem 4. 20 Points: Adversial search heuristics functions
@@ -133,9 +136,6 @@ Since C<sub>a</sub> > C<sub>v</sub> then the branch can be pruned.
 Finally, Root<sub>v</sub> = 53.
 
 
-## Links
-
-Complete code on GitHub [here](https://github.com/StateControlled/CSC480-AI/tree/main/homework1)
+## Appendix
 
 This project uses Google's **Gson** library to parse Json files: [Gson GitHub Repository](https://github.com/google/gson)
-

@@ -33,7 +33,6 @@ public class IterativeDeepeningDFS {
             InternalSolution solution = depthLimitedSearch(root, target, depth, solutionPath);
 
             if (solution.foundTarget()) {
-                System.out.println("Found target! Target: " + target.getName());
                 return solutionPath;
             } else if (!solution.hasRemaining()) {
                 solutionPath.clear();
@@ -46,7 +45,6 @@ public class IterativeDeepeningDFS {
     }
 
     private InternalSolution depthLimitedSearch(Node node, Node target, int depth, List<Node> path) {
-        System.out.println("Visiting node " + node.getName());
         path.add(node);
         if (isGoal(node, target)) {
             return new InternalSolution(node, true);
