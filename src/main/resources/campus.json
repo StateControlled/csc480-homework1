@@ -1,0 +1,21 @@
+{
+  "nodes":
+	[{"name":"Class Room Building A","x":0,"y":291},
+	 {"name":"Class Room Building B","x":0,"y":149},
+	 {"name":"Student Commons","x":71,"y":220},
+	 {"name":"Administration Building","x":306,"y":255},
+	 {"name":"Transportation Hub","x":271,"y":220},
+	 {"name":"Faculty Office Building","x":342,"y":149},
+	 {"name":"Conference Center","x":182,"y":29}
+	],
+
+  "arcs":
+	[ {"first":"Class Room Building A","second":"Student Commons","distance":100},
+	  {"first":"Class Room Building B","second":"Student Commons","distance":100},
+	  {"first":"Student Commons","second":"Transportation Hub","distance":200},
+	  {"first":"Student Commons","second":"Administration Building","distance":275},
+	  {"first":"Transportation Hub","second":"Administration Building","distance":50},
+	  {"first":"Transportation Hub","second":"Faculty Office Building","distance":100},
+	  {"first":"Faculty Office Building","second":"Conference Center","distance":200}
+  	]
+}
