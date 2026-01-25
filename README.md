@@ -18,7 +18,7 @@ To run, enter the following in the terminal:
 > java -jar csc480-homework1-1.0.jar
 
 The command "IDDFS" will run the solution to problem 2. The command "ASTAR" will run the solution to problem 3. <br>
-The complete code on GitHub [here](https://github.com/StateControlled/CSC480-AI/tree/main/homework1)
+The complete code on GitHub [here](https://github.com/StateControlled/csc480-homework1)
 
 ---
 

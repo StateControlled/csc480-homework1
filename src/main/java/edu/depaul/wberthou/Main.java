@@ -99,6 +99,8 @@ public class Main {
             }
         }
 
+        System.out.println();
+        System.out.println("Compete code on GitHub at https://github.com/StateControlled/csc480-homework1");
         System.out.println("Goodbye");
         scanner.close();
     }
