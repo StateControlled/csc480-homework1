@@ -11,11 +11,11 @@ Due January 28, 2026
 
 ## Run
 
-This project was built using Gradle v8.14
+This project was built in Java using Gradle v8.14
 
-To run, enter the following in the terminal from the directory homework1:
+To run, enter the following in the terminal:
 
->./gradlew run
+>java
 
 ---
 

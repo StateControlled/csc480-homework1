@@ -52,6 +52,11 @@ public class Main {
             System.out.println("ENTER A COMMAND");
             Command userInput;
 
+            if (!scanner.hasNextLine()) {
+                System.err.println("Unable to read input.");
+                return;
+            }
+
             String intermediate = scanner.nextLine().toLowerCase().strip();
             String[] intermediate2 = intermediate.split(" ");
             userInput = Command.matches(intermediate2[0]);
