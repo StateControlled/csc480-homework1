@@ -31,6 +31,9 @@ public class Main {
 
     private static final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Search parameters (starting Node and target Node) are hard-coded, but could be easily made dynamic.
+     */
     public static void main(String[] args) {
         Graph graph = new Graph("campus.json");
 
@@ -63,7 +66,7 @@ public class Main {
 
             if (userInput == Command.EXIT) {
                 break;
-            } else if (userInput == Command.ASTAR) {
+            } else if (userInput == Command.IDDFS) {
                 System.out.println("Iterative Deepening Depth-First Search");
                 System.out.println(QUESTION_TWO);
                 System.out.printf("Finding the best path from \"%s\" to \"%s\"...%n", start.getName(), end.getName());
@@ -75,7 +78,7 @@ public class Main {
                 System.out.println("BEST PATH");
                 result.forEach(System.out::println);
                 System.out.println();
-            } else if (userInput == Command.IDDFS) {
+            } else if (userInput == Command.ASTAR) {
                 System.out.println("A*");
                 System.out.println(QUESTION_THREE);
                 System.out.printf("Finding the best path from \"%s\" to \"%s\"...%n", start.getName(), end.getName());

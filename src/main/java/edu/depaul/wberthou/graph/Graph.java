@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Parses a json file to create a graph.
+ */
 public class Graph {
     private final FileReader reader;
     private List<Node> nodes;
