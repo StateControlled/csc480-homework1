@@ -1,0 +1,3 @@
+IDDFS
+ASTAR
+EXIT

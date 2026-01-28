@@ -7,6 +7,8 @@ import edu.depaul.wberthou.search.AStar;
 import edu.depaul.wberthou.search.IterativeDeepeningDFS;
 import edu.depaul.wberthou.util.Command;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
@@ -29,12 +31,17 @@ public class Main {
     private static final String QUESTION_TWO = "Consider just the connectivity of the locations in the graph above. Write an iterative deepening depth first search program to find the best path from Class Room Building A to the Conference Center.";
     private static final String QUESTION_THREE = "Consider both the (X,Y) coordinates and the path costs between the locations in the graph above.%nWrite an A* search program to find the best path from Class Room Building A to the Conference Center.";
 
-    private static final Scanner scanner = new Scanner(System.in);
-
     /**
      * Search parameters (starting Node and target Node) are hard-coded, but could be easily made dynamic.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner scanner;
+        if (args.length > 0) {
+            scanner = new Scanner(new File(args[0]));
+        } else {
+            scanner = new Scanner(System.in);
+        }
+
         Graph graph = new Graph("campus.json");
 
         Optional<Node> first = graph.get(CampusBuilding.CLASSROOM_A.id());
@@ -65,8 +72,10 @@ public class Main {
             userInput = Command.matches(intermediate2[0]);
 
             if (userInput == Command.EXIT) {
+                System.out.println("EXIT");
                 break;
             } else if (userInput == Command.IDDFS) {
+                System.out.println("IDDFS");
                 System.out.println("Iterative Deepening Depth-First Search");
                 System.out.println(QUESTION_TWO);
                 System.out.printf("Finding the best path from \"%s\" to \"%s\"...%n", start.getName(), end.getName());
@@ -79,6 +88,7 @@ public class Main {
                 result.forEach(System.out::println);
                 System.out.println();
             } else if (userInput == Command.ASTAR) {
+                System.out.println("ASTAR");
                 System.out.println("A*");
                 System.out.println(QUESTION_THREE);
                 System.out.printf("Finding the best path from \"%s\" to \"%s\"...%n", start.getName(), end.getName());
@@ -91,6 +101,7 @@ public class Main {
                 a.forEach(System.out::println);
                 System.out.println();
             } else if (userInput == Command.HELP) {
+                System.out.println("HELP");
                 for (Command c : Command.list()) {
                     if (c != Command.NONE) {
                         System.out.printf("%s : \t%s%n", c.getSymbol().toUpperCase(), c.getDescription());
